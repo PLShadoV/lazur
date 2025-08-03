@@ -27,10 +27,7 @@ export default function LazurResort() {
             <h1 className="text-5xl font-bold mb-6">
               Domki letniskowe <span className="text-blue-300">Lazur Resort</span> Rogowo
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
-              Nowoczesne domki nad morzem w Rogowie, województwo zachodniopomorskie. Idealne noclegi dla 8 osób w
-              otoczeniu natury, blisko plaży.
-            </p>
+            <p className="text-xl mb-8 text-blue-100">Oferujemy domki letniskowe nad morzem dla 4, 6 lub 8 osób</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/rezerwacja">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
@@ -386,8 +383,8 @@ export default function LazurResort() {
             <div>
               <h5 className="font-semibold mb-4">Kontakt</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>+48 123 456 789</li>
-                <li>rezerwacje@lazurresort.pl</li>
+                <li>+48 502 939 725</li>
+                <li>lazurresort@op.pl</li>
                 <li>72-330 Rogowo</li>
                 <li>woj. zachodniopomorskie</li>
               </ul>

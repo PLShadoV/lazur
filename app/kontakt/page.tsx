@@ -36,19 +36,23 @@ export default function Kontakt() {
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
-                <Phone className="w-6 h-6 text-blue-600 mr-4 mt-1" />
+                <a href="tel:+48502939725" className="w-6 h-6 text-blue-600 mr-4 mt-1">
+                  <Phone />
+                </a>
                 <div>
                   <h3 className="font-semibold text-gray-900">Telefon</h3>
-                  <p className="text-gray-600">+48 123 456 789</p>
+                  <p className="text-gray-600">+48 502 939 725</p>
                   <p className="text-sm text-gray-500">Czynne codziennie 8:00 - 20:00</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <Mail className="w-6 h-6 text-blue-600 mr-4 mt-1" />
+                <a href="mailto:lazurresort@op.pl" className="w-6 h-6 text-blue-600 mr-4 mt-1">
+                  <Mail />
+                </a>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">rezerwacje@lazurresort.pl</p>
+                  <p className="text-gray-600">lazurresort@op.pl</p>
                   <p className="text-sm text-gray-500">Odpowiadamy w ciągu 24 godzin</p>
                 </div>
               </div>

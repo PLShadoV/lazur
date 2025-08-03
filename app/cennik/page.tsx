@@ -9,30 +9,54 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Cennik - Lazur Resort Rogowo | Ceny domków letniskowych nad morzem",
   description:
-    "Cennik domków letniskowych Lazur Resort w Rogowie. Atrakcyjne ceny noclegów nad morzem dla 8 osób. Rezerwuj domek w województwie zachodniopomorskim.",
+    "Cennik domków letniskowych Lazur Resort w Rogowie. Atrakcyjne ceny noclegów nad morzem dla 4, 5-6 i 7-8 osób. Rezerwuj domek w województwie zachodniopomorskim.",
   keywords:
     "cennik domki letniskowe Rogowo, ceny noclegi nad morzem, Lazur Resort ceny, domki zachodniopomorskie cennik",
 }
 
 export default function Cennik() {
-  const seasons = [
+  const pricingPeriods = [
     {
-      name: "Sezon niski",
-      period: "Styczeń - Maj, Październik - Grudzień",
-      price: "200",
-      description: "Idealne na spokojny wypoczynek poza sezonem",
+      period: "01.04 – 31.05",
+      name: "Sezon wiosenny",
+      prices: { "4os": 400, "5-6os": 450, "7-8os": 500 },
+      description: "Idealne na spokojny wypoczynek wiosną",
     },
     {
-      name: "Sezon średni",
-      period: "Czerwiec, Wrzesień",
-      price: "300",
-      description: "Doskonały czas na aktywny wypoczynek nad morzem",
+      period: "30.04 – 03.05",
+      name: "Majówka",
+      prices: { "4os": 450, "5-6os": 500, "7-8os": 550 },
+      description: "Długi weekend majowy",
     },
     {
+      period: "30.05 – 22.06",
+      name: "Sezon przedwakacyjny",
+      prices: { "4os": 450, "5-6os": 500, "7-8os": 550 },
+      description: "Doskonały czas przed sezonem letnim",
+    },
+    {
+      period: "22.06 – 06.07",
+      name: "Początek lata",
+      prices: { "4os": 550, "5-6os": 600, "7-8os": 650 },
+      description: "Rozpoczęcie sezonu letniego",
+    },
+    {
+      period: "06.07 – 17.08",
       name: "Sezon wysoki",
-      period: "Lipiec - Sierpień",
-      price: "450",
-      description: "Najlepszy czas na wakacje z rodziną nad morzem",
+      prices: { "4os": 650, "5-6os": 700, "7-8os": 750 },
+      description: "Najlepszy czas na wakacje z rodziną",
+    },
+    {
+      period: "17.08 – 31.08",
+      name: "Koniec lata",
+      prices: { "4os": 450, "5-6os": 500, "7-8os": 550 },
+      description: "Spokojniejszy koniec wakacji",
+    },
+    {
+      period: "01.09 – 31.10",
+      name: "Sezon jesienny",
+      prices: { "4os": 400, "5-6os": 450, "7-8os": 500 },
+      description: "Złota polska jesień nad morzem",
     },
   ]
 
@@ -45,37 +69,52 @@ export default function Cennik() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Cennik Domków Letniskowych Lazur Resort Rogowo</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Atrakcyjne ceny noclegów nad morzem w Rogowie. Domki dla 8 osób w województwie zachodniopomorskim z pełnym
-            wyposażeniem i blisko plaży.
+            Szczegółowy cennik noclegów nad morzem w Rogowie. Domki dla 4, 5-6 i 7-8 osób w województwie
+            zachodniopomorskim z pełnym wyposażeniem i blisko plaży.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {seasons.map((season, index) => (
-            <Card key={index} className={`relative overflow-hidden ${index === 1 ? "ring-2 ring-blue-500" : ""}`}>
-              {index === 1 && (
-                <div className="absolute top-0 left-0 right-0 bg-blue-500 text-white text-center py-2 text-sm font-semibold">
-                  NAJPOPULARNIEJSZY
-                </div>
-              )}
-              <CardHeader className={index === 1 ? "pt-12" : ""}>
-                <CardTitle className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">{season.name}</div>
-                  <div className="text-sm text-gray-600 mt-2">{season.period}</div>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-blue-600">{season.price} zł</span>
-                  <span className="text-gray-600">/noc</span>
-                </div>
-                <p className="text-gray-600 mb-6">{season.description}</p>
-                <Link href="/rezerwacja">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Rezerwuj domek</Button>
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Tabela cenowa */}
+        <div className="mb-16 overflow-x-auto">
+          <div className="min-w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {pricingPeriods.map((period, index) => (
+                <Card key={index} className={`relative overflow-hidden ${index === 4 ? "ring-2 ring-blue-500" : ""}`}>
+                  {index === 4 && (
+                    <div className="absolute top-0 left-0 right-0 bg-blue-500 text-white text-center py-2 text-sm font-semibold">
+                      SEZON WYSOKI
+                    </div>
+                  )}
+                  <CardHeader className={index === 4 ? "pt-12" : ""}>
+                    <CardTitle className="text-center">
+                      <div className="text-lg font-bold text-gray-900">{period.name}</div>
+                      <div className="text-sm text-gray-600 mt-1">{period.period}</div>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="space-y-3 mb-6">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Domek 4 osobowy:</span>
+                        <span className="font-bold text-blue-600">{period.prices["4os"]} zł/noc</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Domek 5-6 osobowy:</span>
+                        <span className="font-bold text-blue-600">{period.prices["5-6os"]} zł/noc</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Domek 7-8 osobowy:</span>
+                        <span className="font-bold text-blue-600">{period.prices["7-8os"]} zł/noc</span>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 text-sm mb-6">{period.description}</p>
+                    <Link href="/rezerwacja">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700">Rezerwuj</Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="bg-gray-50 rounded-lg p-8 mb-16">
@@ -84,7 +123,7 @@ export default function Cennik() {
             <div className="space-y-4">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span>Nocleg dla maksymalnie 8 osób</span>
+                <span>Nocleg dla maksymalnie 4, 6 lub 8 osób</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -167,22 +206,22 @@ export default function Cennik() {
             </CardHeader>
             <CardContent className="space-y-3">
               <p>
-                <strong>Maksymalna liczba osób:</strong> 8
+                <strong>Domek 4 osobowy:</strong> 2 sypialnie + salon
+              </p>
+              <p>
+                <strong>Domek 5-6 osobowy:</strong> 3 sypialnie + salon
+              </p>
+              <p>
+                <strong>Domek 7-8 osobowy:</strong> 3 sypialnie + salon z sofą
               </p>
               <p>
                 <strong>Zwierzęta:</strong> dozwolone za dopłatą 30 zł/noc
               </p>
               <p>
-                <strong>Parking:</strong> bezpłatny przy każdym domku
-              </p>
-              <p>
                 <strong>Odległość do morza:</strong> 400 metrów
               </p>
               <p>
-                <strong>Sklepy:</strong> 500 metrów
-              </p>
-              <p>
-                <strong>Restauracje:</strong> 300 metrów
+                <strong>Parking:</strong> bezpłatny przy każdym domku
               </p>
             </CardContent>
           </Card>

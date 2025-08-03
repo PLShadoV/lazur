@@ -1,42 +1,40 @@
 "use client"
 
 import { useState } from "react"
-import { Phone, Mail, MapPin, Facebook, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
+import { Phone, Mail, MapPin, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function FloatingMenu() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true) // Domyślnie rozwinięte
 
   const menuItems = [
     {
       icon: Phone,
       label: "Telefon",
-      href: "tel:+48123456789",
+      href: "tel:+48502939725",
       color: "bg-green-600 hover:bg-green-700",
+      text: "+48 502 939 725",
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:rezerwacje@lazurresort.pl",
+      href: "mailto:lazurresort@op.pl",
       color: "bg-red-600 hover:bg-red-700",
+      text: "lazurresort@op.pl",
     },
     {
       icon: MapPin,
-      label: "Mapa",
-      href: "https://maps.google.com/?q=Rogowo+72-330",
+      label: "Mapa Google",
+      href: "https://maps.google.com/?q=Lazur+Resort+Rogowo",
       color: "bg-blue-600 hover:bg-blue-700",
-    },
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://facebook.com/lazurresort",
-      color: "bg-blue-800 hover:bg-blue-900",
+      text: "Lokalizacja",
     },
     {
       icon: Calendar,
       label: "Booking.com",
-      href: "https://booking.com",
+      href: "https://www.booking.com/hotel/pl/lazur-resort.pl.html",
       color: "bg-orange-600 hover:bg-orange-700",
+      text: "Booking.com",
     },
   ]
 
@@ -55,12 +53,13 @@ export default function FloatingMenu() {
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className={`${item.color} text-white p-3 rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-200 group`}
+              className={`${item.color} text-white p-3 rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-200 group relative`}
               title={item.label}
             >
               <item.icon className="w-5 h-5" />
-              <span className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                {item.label}
+              <span className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <div className="font-semibold">{item.label}</div>
+                <div className="text-xs text-gray-300">{item.text}</div>
               </span>
             </a>
           ))}
