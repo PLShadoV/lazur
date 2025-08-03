@@ -81,14 +81,14 @@ export default function RezerwacjaClient() {
   const { totalPrice, nights, pricePerNight } = calculatePrice(checkIn, checkOut, guests)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-cream-50">
       <Header />
       <FloatingMenu />
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Rezerwacja Domków Letniskowych Lazur Resort</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold text-navy-900 mb-4">Rezerwacja Domków Letniskowych Lazur Resort</h1>
+          <p className="text-xl text-navy-600 max-w-3xl mx-auto">
             Zarezerwuj swój domek nad morzem w Rogowie już dziś! Noclegi dla 4, 6 lub 8 osób w województwie
             zachodniopomorskim z pełnym komfortem.
           </p>
@@ -96,51 +96,68 @@ export default function RezerwacjaClient() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 text-blue-600" />
+            <Card className="border-navy-100 shadow-lg">
+              <CardHeader className="bg-navy-50">
+                <CardTitle className="flex items-center text-navy-800">
+                  <Calendar className="w-5 h-5 mr-2 text-navy-600" />
                   Formularz rezerwacji domku
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-6">
                 <form className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Imię *</label>
-                      <Input placeholder="Twoje imię" required />
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Imię *</label>
+                      <Input placeholder="Twoje imię" required className="border-navy-200 focus:border-navy-400" />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Nazwisko *</label>
-                      <Input placeholder="Twoje nazwisko" required />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium mb-2 block">Email *</label>
-                      <Input type="email" placeholder="twoj@email.pl" required />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium mb-2 block">Telefon *</label>
-                      <Input placeholder="+48 502 939 725" required />
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Nazwisko *</label>
+                      <Input placeholder="Twoje nazwisko" required className="border-navy-200 focus:border-navy-400" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Data przyjazdu *</label>
-                      <Input type="date" value={checkIn} onChange={(e) => setCheckIn(e.target.value)} required />
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Email *</label>
+                      <Input
+                        type="email"
+                        placeholder="twoj@email.pl"
+                        required
+                        className="border-navy-200 focus:border-navy-400"
+                      />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Data wyjazdu *</label>
-                      <Input type="date" value={checkOut} onChange={(e) => setCheckOut(e.target.value)} required />
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Telefon *</label>
+                      <Input placeholder="+48 502 939 725" required className="border-navy-200 focus:border-navy-400" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Liczba osób *</label>
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Data przyjazdu *</label>
+                      <Input
+                        type="date"
+                        value={checkIn}
+                        onChange={(e) => setCheckIn(e.target.value)}
+                        required
+                        className="border-navy-200 focus:border-navy-400"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Data wyjazdu *</label>
+                      <Input
+                        type="date"
+                        value={checkOut}
+                        onChange={(e) => setCheckOut(e.target.value)}
+                        required
+                        className="border-navy-200 focus:border-navy-400"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Liczba osób *</label>
                       <Input
                         type="number"
                         min="1"
@@ -149,38 +166,49 @@ export default function RezerwacjaClient() {
                         onChange={(e) => setGuests(Number.parseInt(e.target.value) || 4)}
                         placeholder="Maksymalnie 8"
                         required
+                        className="border-navy-200 focus:border-navy-400"
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Liczba dzieci</label>
-                      <Input type="number" min="0" max="8" placeholder="0" />
+                      <label className="text-sm font-medium mb-2 block text-navy-700">Liczba dzieci</label>
+                      <Input
+                        type="number"
+                        min="0"
+                        max="8"
+                        placeholder="0"
+                        className="border-navy-200 focus:border-navy-400"
+                      />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Czy przyjeżdżacie z psem?</label>
+                    <label className="text-sm font-medium mb-2 block text-navy-700">Czy przyjeżdżacie z psem?</label>
                     <div className="flex items-center space-x-4">
                       <label className="flex items-center">
-                        <input type="radio" name="pet" value="nie" className="mr-2" defaultChecked />
+                        <input type="radio" name="pet" value="nie" className="mr-2 text-navy-600" defaultChecked />
                         Nie
                       </label>
                       <label className="flex items-center">
-                        <input type="radio" name="pet" value="tak" className="mr-2" />
+                        <input type="radio" name="pet" value="tak" className="mr-2 text-navy-600" />
                         Tak (+30 zł/noc)
                       </label>
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Dodatkowe informacje</label>
-                    <Textarea placeholder="Szczególne życzenia, pytania o domek letniskowy nad morzem..." rows={4} />
+                    <label className="text-sm font-medium mb-2 block text-navy-700">Dodatkowe informacje</label>
+                    <Textarea
+                      placeholder="Szczególne życzenia, pytania o domek letniskowy nad morzem..."
+                      rows={4}
+                      className="border-navy-200 focus:border-navy-400"
+                    />
                   </div>
 
                   {/* Podsumowanie ceny */}
                   {totalPrice > 0 && (
-                    <div className="bg-blue-50 p-6 rounded-lg">
-                      <h3 className="text-lg font-semibold text-blue-900 mb-4">Podsumowanie rezerwacji</h3>
-                      <div className="space-y-2 text-blue-800">
+                    <div className="bg-amber-50 border border-amber-200 p-6 rounded-lg">
+                      <h3 className="text-lg font-semibold text-amber-900 mb-4">Podsumowanie rezerwacji</h3>
+                      <div className="space-y-2 text-amber-800">
                         <div className="flex justify-between">
                           <span>Liczba nocy:</span>
                           <span className="font-semibold">{nights}</span>
@@ -199,20 +227,20 @@ export default function RezerwacjaClient() {
                           <span>Średnia cena za noc:</span>
                           <span className="font-semibold">{pricePerNight} zł</span>
                         </div>
-                        <hr className="border-blue-200" />
+                        <hr className="border-amber-300" />
                         <div className="flex justify-between text-lg font-bold">
                           <span>Całkowity koszt:</span>
                           <span>{totalPrice} zł</span>
                         </div>
-                        <div className="text-sm text-blue-600">Zaliczka (30%): {Math.round(totalPrice * 0.3)} zł</div>
+                        <div className="text-sm text-amber-700">Zadatek (20%): {Math.round(totalPrice * 0.2)} zł</div>
                       </div>
                     </div>
                   )}
 
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-navy-50 border border-navy-200 p-4 rounded-lg">
                     <div className="flex items-start">
-                      <AlertCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                      <div className="text-sm text-blue-800">
+                      <AlertCircle className="w-5 h-5 text-navy-600 mr-2 mt-0.5" />
+                      <div className="text-sm text-navy-700">
                         <p className="font-semibold mb-1">Informacja o rezerwacji:</p>
                         <p>
                           Po wysłaniu formularza skontaktujemy się z Państwem w ciągu 24 godzin w celu potwierdzenia
@@ -222,7 +250,7 @@ export default function RezerwacjaClient() {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                  <Button className="w-full bg-navy-700 hover:bg-navy-800 text-lg py-3">
                     Wyślij zapytanie o rezerwację
                   </Button>
                 </form>
@@ -231,62 +259,64 @@ export default function RezerwacjaClient() {
           </div>
 
           <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Users className="w-5 h-5 mr-2 text-blue-600" />
+            <Card className="border-navy-100 shadow-lg">
+              <CardHeader className="bg-navy-50">
+                <CardTitle className="flex items-center text-navy-800">
+                  <Users className="w-5 h-5 mr-2 text-navy-600" />
                   Domki Lazur Resort
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-6">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span>Dostępne domki:</span>
-                    <Badge variant="outline">4 domki</Badge>
+                    <span className="text-navy-700">Dostępne domki:</span>
+                    <Badge variant="outline" className="border-navy-300 text-navy-700">
+                      4 domki
+                    </Badge>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>Domek 4 osobowy:</span>
-                    <span className="text-sm">2 sypialnie + salon</span>
+                    <span className="text-navy-700">Domek 4 osobowy:</span>
+                    <span className="text-sm text-navy-600">2 sypialnie + salon</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>Domek 5-6 osobowy:</span>
-                    <span className="text-sm">3 sypialnie + salon</span>
+                    <span className="text-navy-700">Domek 5-6 osobowy:</span>
+                    <span className="text-sm text-navy-600">3 sypialnie + salon</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>Domek 7-8 osobowy:</span>
-                    <span className="text-sm">3 sypialnie + sofa</span>
+                    <span className="text-navy-700">Domek 7-8 osobowy:</span>
+                    <span className="text-sm text-navy-600">3 sypialnie + sofa</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>Odległość do morza:</span>
-                    <span className="text-sm">400m</span>
+                    <span className="text-navy-700">Odległość do morza:</span>
+                    <span className="text-sm text-navy-600">400m</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>Parking:</span>
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-navy-700">Parking:</span>
+                    <CheckCircle className="w-4 h-4 text-emerald-500" />
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>WiFi:</span>
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-navy-700">WiFi:</span>
+                    <CheckCircle className="w-4 h-4 text-emerald-500" />
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Kontakt bezpośredni</CardTitle>
+            <Card className="border-navy-100 shadow-lg">
+              <CardHeader className="bg-navy-50">
+                <CardTitle className="text-navy-800">Kontakt bezpośredni</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-6">
                 <div className="space-y-3">
                   <div className="flex items-center">
-                    <Phone className="w-4 h-4 text-blue-600 mr-2" />
-                    <span className="text-sm">+48 502 939 725</span>
+                    <Phone className="w-4 h-4 text-navy-600 mr-2" />
+                    <span className="text-sm text-navy-700">+48 502 939 725</span>
                   </div>
                   <div className="flex items-center">
-                    <Mail className="w-4 h-4 text-blue-600 mr-2" />
-                    <span className="text-sm">lazurresort@op.pl</span>
+                    <Mail className="w-4 h-4 text-navy-600 mr-2" />
+                    <span className="text-sm text-navy-700">lazurresort@op.pl</span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-3">
+                  <p className="text-xs text-navy-500 mt-3">
                     Preferujesz kontakt telefoniczny? Zadzwoń do nas codziennie w godzinach 8:00 - 20:00
                   </p>
                 </div>
@@ -295,23 +325,23 @@ export default function RezerwacjaClient() {
           </div>
         </div>
 
-        <div className="mt-16 bg-blue-600 text-white rounded-lg p-8 text-center">
+        <div className="mt-16 bg-navy-700 text-cream-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Dlaczego rezerwować domki w Lazur Resort Rogowo?</h2>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div>
-              <CheckCircle className="w-8 h-8 mx-auto mb-3" />
+              <CheckCircle className="w-8 h-8 mx-auto mb-3 text-emerald-400" />
               <h3 className="font-semibold mb-2">Gwarancja najlepszej ceny</h3>
-              <p className="text-sm text-blue-100">Konkurencyjne ceny noclegów nad morzem</p>
+              <p className="text-sm text-cream-200">Konkurencyjne ceny noclegów nad morzem</p>
             </div>
             <div>
-              <CheckCircle className="w-8 h-8 mx-auto mb-3" />
+              <CheckCircle className="w-8 h-8 mx-auto mb-3 text-emerald-400" />
               <h3 className="font-semibold mb-2">Bezpłatna anulacja</h3>
-              <p className="text-sm text-blue-100">Do 7 dni przed przyjazdem</p>
+              <p className="text-sm text-cream-200">Do 7 dni przed przyjazdem</p>
             </div>
             <div>
-              <CheckCircle className="w-8 h-8 mx-auto mb-3" />
+              <CheckCircle className="w-8 h-8 mx-auto mb-3 text-emerald-400" />
               <h3 className="font-semibold mb-2">Obsługa 24/7</h3>
-              <p className="text-sm text-blue-100">Zawsze jesteśmy do Państwa dyspozycji</p>
+              <p className="text-sm text-cream-200">Zawsze jesteśmy do Państwa dyspozycji</p>
             </div>
           </div>
         </div>
