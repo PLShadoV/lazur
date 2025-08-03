@@ -17,22 +17,35 @@ export default function LazurResort() {
       <section className="relative h-[600px] bg-gradient-to-br from-slate-800 via-blue-800 to-cyan-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <Image
-          src="/placeholder.svg?height=600&width=1200&text=Lazur+Resort+Rogowo+domki+nad+morzem"
+          src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/dji_fly_20250718_105210_175_1752828774533_photo_optimized.jpg"
           alt="Lazur Resort Rogowo - domki letniskowe nad morzem"
           fill
           className="object-cover"
+          priority
         />
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-perla-50">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Domki letniskowe <span className="text-zloty-300">Lazur Resort</span> Rogowo
+            <h1
+              className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg"
+              style={{
+                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+                WebkitTextStroke: "1px black",
+              }}
+            >
+              Domki letniskowe <span className="leading-7 text-white font-sans">Lazur Resort</span> Rogowo
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-perla-100">
+            <p
+              className="text-lg md:text-xl mb-8 text-perla-100 drop-shadow-lg"
+              style={{
+                textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
+                WebkitTextStroke: "0.5px black",
+              }}
+            >
               Oferujemy domki letniskowe nad morzem dla 4, 6 lub 8 osób
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/rezerwacja">
-                <Button size="lg" className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">
+                <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white">
                   Rezerwuj domek
                 </Button>
               </Link>
@@ -40,7 +53,7 @@ export default function LazurResort() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-perla-50 text-perla-50 hover:bg-perla-50 hover:text-szafir-700 bg-transparent"
+                  className="border-white bg-white text-black hover:bg-gray-100 hover:text-black"
                 >
                   Zobacz cennik
                 </Button>
@@ -111,7 +124,7 @@ export default function LazurResort() {
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-szafir-100 rounded-2xl">
               <div className="relative h-64">
                 <Image
-                  src="/placeholder.svg?height=300&width=600&text=Domek+Lazur+Resort+Rogowo"
+                  src="https://lazurrogowo.pl/wp/wp-content/uploads/2022/05/IMG_20220513_132903.jpg"
                   alt="Domek letniskowy Lazur Resort Rogowo - noclegi nad morzem dla 8 osób"
                   fill
                   className="object-cover"
