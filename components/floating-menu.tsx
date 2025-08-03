@@ -1,52 +1,57 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
-import { Phone, Mail, MapPin, Facebook, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Phone, Mail, MapPin, Calendar, ChevronUp, ChevronDown } from "lucide-react"
 
 export default function FloatingMenu() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
+
+  const handleToggle = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsOpen(!isOpen)
+  }
 
   const menuItems = [
     {
       icon: Phone,
       label: "Telefon",
-      href: "tel:+48123456789",
-      color: "bg-green-600 hover:bg-green-700",
+      href: "tel:+48502939725",
+      color: "bg-emerald-600 hover:bg-emerald-700",
+      text: "+48 502 939 725",
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:rezerwacje@lazurresort.pl",
-      color: "bg-red-600 hover:bg-red-700",
+      href: "mailto:lazurresort@op.pl",
+      color: "bg-rusinowy-600 hover:bg-rusinowy-700",
+      text: "lazurresort@op.pl",
     },
     {
       icon: MapPin,
-      label: "Mapa",
-      href: "https://maps.google.com/?q=Rogowo+72-330",
-      color: "bg-blue-600 hover:bg-blue-700",
-    },
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://facebook.com/lazurresort",
-      color: "bg-blue-800 hover:bg-blue-900",
+      label: "Mapa Google",
+      href: "https://maps.google.com/?q=Lazur+Resort+Rogowo",
+      color: "bg-slate-600 hover:bg-slate-700",
+      text: "Lokalizacja",
     },
     {
       icon: Calendar,
-      label: "Booking.com",
-      href: "https://booking.com",
-      color: "bg-orange-600 hover:bg-orange-700",
+      label: "Rezerwacja",
+      href: "/rezerwacja",
+      color: "bg-amber-600 hover:bg-amber-700",
+      text: "Rezerwuj online",
     },
   ]
 
   return (
     <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50">
-      <div className="flex items-center">
+      <div className="flex flex-col items-end">
         {/* Menu Items */}
         <div
-          className={`flex flex-col space-y-2 transition-all duration-300 ${
-            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          className={`flex flex-col space-y-2 transition-all duration-300 mb-2 ${
+            isOpen ? "translate-y-0 opacity-100 visible" : "translate-y-full opacity-0 invisible"
           }`}
         >
           {menuItems.map((item, index) => (
@@ -55,25 +60,26 @@ export default function FloatingMenu() {
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className={`${item.color} text-white p-3 rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-200 group`}
+              className={`${item.color} text-white p-2.5 rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-200 group relative`}
               title={item.label}
             >
-              <item.icon className="w-5 h-5" />
-              <span className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                {item.label}
+              <item.icon className="w-4 h-4" />
+              <span className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+                <div className="font-semibold">{item.label}</div>
+                <div className="text-xs text-gray-300">{item.text}</div>
               </span>
             </a>
           ))}
         </div>
 
         {/* Toggle Button */}
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-l-lg shadow-lg ml-0"
-          size="sm"
+        <button
+          onClick={handleToggle}
+          className="bg-szafir-700 hover:bg-szafir-800 text-white p-2.5 rounded-l-lg shadow-lg transition-colors"
+          type="button"
         >
-          {isOpen ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
-        </Button>
+          {isOpen ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+        </button>
       </div>
     </div>
   )

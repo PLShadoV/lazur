@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Wifi, Car, Trees, Waves, Home, Users, Star, CheckCircle } from "lucide-react"
+import { MapPin, Wifi, Car, Trees, Waves, Home, Users, Star, CheckCircle, Heart, Bike } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import FloatingMenu from "@/components/floating-menu"
@@ -9,12 +9,12 @@ import Header from "@/components/header"
 
 export default function LazurResort() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-perla-50">
       <Header />
       <FloatingMenu />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="relative h-[600px] bg-gradient-to-r from-szafir-800 to-szafir-600">
         <div className="absolute inset-0 bg-black/20"></div>
         <Image
           src="/placeholder.svg?height=600&width=1200&text=Lazur+Resort+Rogowo+domki+nad+morzem"
@@ -23,17 +23,14 @@ export default function LazurResort() {
           className="object-cover"
         />
         <div className="relative container mx-auto px-4 h-full flex items-center">
-          <div className="max-w-2xl text-white">
+          <div className="max-w-2xl text-perla-50">
             <h1 className="text-5xl font-bold mb-6">
-              Domki letniskowe <span className="text-blue-300">Lazur Resort</span> Rogowo
+              Domki letniskowe <span className="text-zloty-300">Lazur Resort</span> Rogowo
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
-              Nowoczesne domki nad morzem w Rogowie, województwo zachodniopomorskie. Idealne noclegi dla 8 osób w
-              otoczeniu natury, blisko plaży.
-            </p>
+            <p className="text-xl mb-8 text-perla-100">Oferujemy domki letniskowe nad morzem dla 4, 6 lub 8 osób</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/rezerwacja">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+                <Button size="lg" className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">
                   Rezerwuj domek
                 </Button>
               </Link>
@@ -41,7 +38,7 @@ export default function LazurResort() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+                  className="border-perla-50 text-perla-50 hover:bg-perla-50 hover:text-szafir-700 bg-transparent"
                 >
                   Zobacz cennik
                 </Button>
@@ -52,42 +49,42 @@ export default function LazurResort() {
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-szafir-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Dlaczego domki Lazur Resort w Rogowie?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-szafir-900 mb-4">Dlaczego domki Lazur Resort w Rogowie?</h2>
+            <p className="text-szafir-700 max-w-2xl mx-auto">
               Oferujemy 4 komfortowe domki letniskowe nad morzem, każdy dla maksymalnie 8 osób
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-szafir-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Home className="w-8 h-8 text-szafir-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Domki dla 8 osób</h3>
-              <p className="text-gray-600">Przestronne domki letniskowe z pełnym wyposażeniem dla całej rodziny</p>
+              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Domki dla 8 osób</h3>
+              <p className="text-szafir-600">Przestronne domki letniskowe z pełnym wyposażeniem dla całej rodziny</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Waves className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-rusinowy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Waves className="w-8 h-8 text-rusinowy-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Blisko morza</h3>
-              <p className="text-gray-600">Noclegi nad morzem w Rogowie - zaledwie kilka minut do plaży</p>
+              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Blisko morza</h3>
+              <p className="text-szafir-600">Noclegi nad morzem w Rogowie - zaledwie kilka minut do plaży</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wifi className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-zloty-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wifi className="w-8 h-8 text-zloty-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Pełne wyposażenie</h3>
-              <p className="text-gray-600">WiFi, TV, klimatyzacja i wszystko czego potrzebujesz na wakacje</p>
+              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Pełne wyposażenie</h3>
+              <p className="text-szafir-600">WiFi, TV, klimatyzacja i wszystko czego potrzebujesz na wakacje</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Car className="w-8 h-8 text-orange-600" />
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Car className="w-8 h-8 text-emerald-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Parking</h3>
-              <p className="text-gray-600">Bezpłatny parking przy każdym domku letniskowym</p>
+              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Parking</h3>
+              <p className="text-szafir-600">Bezpłatny parking przy każdym domku letniskowym</p>
             </div>
           </div>
         </div>
@@ -97,13 +94,13 @@ export default function LazurResort() {
       <section id="oferta" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nasze domki letniskowe nad morzem</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-szafir-900 mb-4">Nasze domki letniskowe nad morzem</h2>
+            <p className="text-szafir-700 max-w-2xl mx-auto">
               4 identyczne domki w Rogowie, każdy dla maksymalnie 8 osób
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow border-szafir-100">
               <div className="relative h-64">
                 <Image
                   src="/placeholder.svg?height=300&width=600&text=Domek+Lazur+Resort+Rogowo"
@@ -111,63 +108,65 @@ export default function LazurResort() {
                   fill
                   className="object-cover"
                 />
-                <Badge className="absolute top-4 left-4 bg-green-600">Dostępne 4 domki</Badge>
+                <Badge className="absolute top-4 left-4 bg-rusinowy-600 text-perla-50">Dostępne 4 domki</Badge>
               </div>
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
+                <CardTitle className="flex items-center justify-between text-szafir-800">
                   Domek Lazur Resort
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-1" />
                     <span className="text-sm">do 8 osób</span>
                   </div>
                 </CardTitle>
-                <CardDescription>Komfortowy domek letniskowy nad morzem w Rogowie</CardDescription>
+                <CardDescription className="text-szafir-600">
+                  Komfortowy domek letniskowy nad morzem w Rogowie
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="space-y-2">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />3 sypialnie + salon z rozkładaną sofą
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />3 sypialnie + salon z rozkładaną sofą
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
                       Kuchnia z pełnym wyposażeniem
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />2 łazienki z prysznicem
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />2 łazienki z prysznicem
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
                       Duży taras z meblami ogrodowymi
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
                       WiFi i telewizja satelitarna
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
                       Miejsce na grilla
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
                       Parking przy domku
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />5 minut pieszo do morza
+                    <div className="flex items-center text-sm text-szafir-700">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />5 minut pieszo do morza
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div>
-                    <Link href="/cennik" className="text-2xl font-bold text-blue-600 hover:underline">
+                    <Link href="/cennik" className="text-2xl font-bold text-szafir-700 hover:underline">
                       Zobacz cennik
                     </Link>
-                    <p className="text-gray-600">Ceny sezonowe</p>
+                    <p className="text-szafir-600">Ceny sezonowe</p>
                   </div>
                   <Link href="/rezerwacja">
-                    <Button className="bg-blue-600 hover:bg-blue-700">Rezerwuj domek</Button>
+                    <Button className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">Rezerwuj domek</Button>
                   </Link>
                 </div>
               </CardContent>
@@ -176,37 +175,132 @@ export default function LazurResort() {
         </div>
       </section>
 
+      {/* Nowa sekcja - Psy i Rowery */}
+      <section className="py-16 bg-szafir-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Kolumna z psami */}
+            <div className="flex flex-col">
+              <div className="relative h-64 rounded-lg overflow-hidden mb-6">
+                <Image
+                  src="/placeholder.svg?height=300&width=500&text=Pies+na+plaży+Rogowo+domki+przyjazne+zwierzętom"
+                  alt="Pies na plaży w Rogowie - domki przyjazne zwierzętom"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center mb-4">
+                  <Heart className="w-8 h-8 text-rusinowy-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-szafir-900">Noclegi z psem nad morzem</h3>
+                </div>
+                <p className="text-szafir-700 mb-4">
+                  Twój czworonożny przyjaciel jest u nas mile widziany! Nasze domki w Rogowie to idealne miejsce na
+                  wakacje z psem nad Bałtykiem.
+                </p>
+                <ul className="space-y-2 text-szafir-600 mb-6">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Ogrodzony taras przy każdym domku
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Plaża przyjazna psom (400m)
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Lasy sosnowe do spacerów
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Dopłata tylko 30 zł/noc
+                  </li>
+                </ul>
+                <Link href="/okolica/noclegi-z-psem">
+                  <Button className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">
+                    Dowiedz się więcej o noclegach z psem
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Kolumna z rowerami */}
+            <div className="flex flex-col">
+              <div className="relative h-64 rounded-lg overflow-hidden mb-6">
+                <Image
+                  src="/placeholder.svg?height=300&width=500&text=Ścieżka+rowerowa+R-10+Rogowo+las+sosnowy"
+                  alt="Ścieżka rowerowa R-10 przez las sosnowy w Rogowie"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center mb-4">
+                  <Bike className="w-8 h-8 text-szafir-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-szafir-900">Ścieżki rowerowe nad Bałtykiem</h3>
+                </div>
+                <p className="text-szafir-700 mb-4">
+                  Rogowo to raj dla rowerzystów! Przez miejscowość przebiega Nadmorski Szlak R-10 i międzynarodowa trasa
+                  EuroVelo 10.
+                </p>
+                <ul className="space-y-2 text-szafir-600 mb-6">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Nadmorski Szlak Rowerowy R-10
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Trasy do Mrzeżyna, Dźwirzyna, Kołobrzegu
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Bezpieczne ścieżki przez lasy
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                    Wypożyczalnia rowerów w pobliżu
+                  </li>
+                </ul>
+                <Link href="/okolica/sciezki-rowerowe">
+                  <Button className="bg-szafir-600 hover:bg-szafir-700 text-perla-50">Odkryj trasy rowerowe</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lokalizacja */}
-      <section id="lokalizacja" className="py-16 bg-gray-50">
+      <section id="lokalizacja" className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Lokalizacja - Rogowo nad morzem</h2>
-              <p className="text-gray-600 mb-6">
+              <h2 className="text-3xl font-bold text-szafir-900 mb-6">Lokalizacja - Rogowo nad morzem</h2>
+              <p className="text-szafir-700 mb-6">
                 Lazur Resort znajduje się w Rogowie w województwie zachodniopomorskim. Nasze domki letniskowe nad morzem
                 to idealne miejsce na wypoczynek z rodziną, blisko plaży i atrakcji turystycznych.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <MapPin className="w-5 h-5 text-blue-600 mr-3" />
-                  <span>72-330 Rogowo, województwo zachodniopomorskie</span>
+                  <MapPin className="w-5 h-5 text-rusinowy-600 mr-3" />
+                  <span className="text-szafir-700">72-330 Rogowo, województwo zachodniopomorskie</span>
                 </div>
                 <div className="flex items-center">
-                  <Waves className="w-5 h-5 text-blue-600 mr-3" />
-                  <span>5 minut pieszo do morza</span>
+                  <Waves className="w-5 h-5 text-rusinowy-600 mr-3" />
+                  <span className="text-szafir-700">5 minut pieszo do morza</span>
                 </div>
                 <div className="flex items-center">
-                  <Car className="w-5 h-5 text-blue-600 mr-3" />
-                  <span>15 km od Kołobrzegu</span>
+                  <Car className="w-5 h-5 text-rusinowy-600 mr-3" />
+                  <span className="text-szafir-700">15 km od Kołobrzegu</span>
                 </div>
                 <div className="flex items-center">
-                  <Trees className="w-5 h-5 text-blue-600 mr-3" />
-                  <span>Otoczenie lasów i wydm</span>
+                  <Trees className="w-5 h-5 text-rusinowy-600 mr-3" />
+                  <span className="text-szafir-700">Otoczenie lasów i wydm</span>
                 </div>
               </div>
               <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-4">Atrakcje w pobliżu:</h3>
-                <ul className="space-y-2 text-gray-600">
+                <h3 className="text-xl font-semibold mb-4 text-szafir-800">Atrakcje w pobliżu:</h3>
+                <ul className="space-y-2 text-szafir-700">
                   <li>• Plaża w Rogowie - 400m</li>
                   <li>• Ścieżki rowerowe - 100m</li>
                   <li>• Kołobrzeg - 15 km</li>
@@ -227,83 +321,159 @@ export default function LazurResort() {
         </div>
       </section>
 
-      {/* Opinie */}
-      <section className="py-16">
+      {/* Opinie Google */}
+      <section className="py-16 bg-szafir-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Opinie o domkach Lazur Resort</h2>
+            <h2 className="text-3xl font-bold text-szafir-900 mb-4">Opinie Google o Lazur Resort</h2>
             <div className="flex items-center justify-center mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                <Star key={i} className="w-6 h-6 text-zloty-400 fill-current" />
               ))}
-              <span className="ml-2 text-gray-600">4.9/5 na podstawie 127 opinii</span>
+              <span className="ml-2 text-szafir-700">4.9/5 na podstawie opinii Google</span>
             </div>
+            <p className="text-szafir-600">Wyszukaj: "Lazur Resort domki letniskowe" w Google</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card>
+            <Card className="border-szafir-100">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-zloty-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
-                  "Wspaniałe domki nad morzem! Bardzo czyste, dobrze wyposażone. Lokalizacja idealna - blisko plaży w
-                  Rogowie. Polecam wszystkim szukającym noclegów nad morzem."
+                <p className="text-szafir-700 mb-4">
+                  "Fantastyczne domki nad morzem! Byliśmy z rodziną 8 osób i wszyscy byli zachwyceni. Domek bardzo
+                  czysty, dobrze wyposażony. Plaża blisko, parking przy domku. Właściciele bardzo mili i pomocni.
+                  Zdecydowanie wrócimy!"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-blue-600 font-semibold">AK</span>
+                  <div className="w-10 h-10 bg-szafir-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-szafir-700 font-semibold">MK</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Anna Kowalska</p>
-                    <p className="text-sm text-gray-500">Sierpień 2024</p>
+                    <p className="font-semibold text-szafir-800">Magdalena Kowalczyk</p>
+                    <p className="text-sm text-szafir-500">2 miesiące temu</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-szafir-100">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-zloty-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
-                  "Rodzinny wypoczynek w domku letniskowym udany w 100%! Miejsce dla 8 osób, dzieci były zachwycone
-                  bliskością morza. Na pewno wrócimy do Lazur Resort!"
+                <p className="text-szafir-700 mb-4">
+                  "Świetne miejsce na wakacje z psem! Nasz labrador był zachwycony plażą i lasem. Domek przestronny,
+                  taras ogrodzony - pies mógł swobodnie biegać. Lokalizacja idealna - spokojnie, a blisko do Kołobrzegu.
+                  Polecam!"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-green-600 font-semibold">MN</span>
+                  <div className="w-10 h-10 bg-rusinowy-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-rusinowy-700 font-semibold">PW</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Marek Nowak</p>
-                    <p className="text-sm text-gray-500">Lipiec 2024</p>
+                    <p className="font-semibold text-szafir-800">Piotr Wiśniewski</p>
+                    <p className="text-sm text-szafir-500">3 miesiące temu</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-szafir-100">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-zloty-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
-                  "Piękne, spokojne miejsce nad morzem. Domek w Rogowie to prawdziwa perełka. Obsługa bardzo miła,
-                  polecam te noclegi nad morzem!"
+                <p className="text-szafir-700 mb-4">
+                  "Najlepsze domki nad morzem w jakich byliśmy! Czysto, komfortowo, wszystko działa. Dzieci były
+                  zachwycone bliskością plaży. Rowery można wypożyczyć w pobliżu - świetne trasy. Obsługa na najwyższym
+                  poziomie. 10/10!"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-purple-600 font-semibold">EW</span>
+                  <div className="w-10 h-10 bg-zloty-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-zloty-700 font-semibold">AS</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Ewa Wiśniewska</p>
-                    <p className="text-sm text-gray-500">Wrzesień 2024</p>
+                    <p className="font-semibold text-szafir-800">Anna Szymańska</p>
+                    <p className="text-sm text-szafir-500">1 miesiąc temu</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-szafir-100">
+              <CardContent className="pt-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-zloty-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-szafir-700 mb-4">
+                  "Domek w Rogowie to strzał w dziesiątkę! Spokojnie, czysto, blisko morza. Kuchnia świetnie wyposażona,
+                  łazienki czyste. WiFi działa bez zarzutu. Parking bezpłatny. Właściciele bardzo pomocni. Już planujemy
+                  kolejny pobyt!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-emerald-700 font-semibold">TN</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-szafir-800">Tomasz Nowak</p>
+                    <p className="text-sm text-szafir-500">4 miesiące temu</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-szafir-100">
+              <CardContent className="pt-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-zloty-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-szafir-700 mb-4">
+                  "Rewelacyjne wakacje w Lazur Resort! Domek dla 6 osób idealny dla naszej rodziny. Wszystko czyste i
+                  zadbane. Taras z grillem super. Plaża piękna i blisko. Ścieżki rowerowe fantastyczne. Już
+                  zarezerwowaliśmy na przyszły rok!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-szafir-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-szafir-700 font-semibold">KL</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-szafir-800">Katarzyna Lewandowska</p>
+                    <p className="text-sm text-szafir-500">2 miesiące temu</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-szafir-100">
+              <CardContent className="pt-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-zloty-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-szafir-700 mb-4">
+                  "Najlepszy wybór na wakacje nad morzem! Domki w Rogowie to prawdziwa perełka. Cisza, spokój, a
+                  jednocześnie blisko do wszystkich atrakcji. Kołobrzeg 15 minut autem. Polecam każdemu szukającemu
+                  komfortowego wypoczynku!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-rusinowy-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-rusinowy-700 font-semibold">JK</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-szafir-800">Jakub Kowalski</p>
+                    <p className="text-sm text-szafir-500">1 miesiąc temu</p>
                   </div>
                 </div>
               </CardContent>
@@ -313,44 +483,44 @@ export default function LazurResort() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-szafir-900 text-perla-50 py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Waves className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 bg-rusinowy-600 rounded-lg flex items-center justify-center">
+                  <Waves className="w-5 h-5 text-perla-50" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Lazur Resort</h4>
-                  <p className="text-sm text-gray-400">Rogowo</p>
+                  <p className="text-sm text-perla-300">Rogowo</p>
                 </div>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-perla-300 text-sm">
                 Domki letniskowe nad morzem w Rogowie. Noclegi dla 8 osób w województwie zachodniopomorskim.
               </p>
             </div>
 
             <div>
               <h5 className="font-semibold mb-4">Strony</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-perla-300">
                 <li>
-                  <Link href="/galeria" className="hover:text-white">
+                  <Link href="/galeria" className="hover:text-perla-100">
                     Galeria
                   </Link>
                 </li>
                 <li>
-                  <Link href="/cennik" className="hover:text-white">
+                  <Link href="/cennik" className="hover:text-perla-100">
                     Cennik
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rezerwacja" className="hover:text-white">
+                  <Link href="/rezerwacja" className="hover:text-perla-100">
                     Rezerwacja
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kontakt" className="hover:text-white">
+                  <Link href="/kontakt" className="hover:text-perla-100">
                     Kontakt
                   </Link>
                 </li>
@@ -359,24 +529,24 @@ export default function LazurResort() {
 
             <div>
               <h5 className="font-semibold mb-4">Okolica</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-perla-300">
                 <li>
-                  <Link href="/okolica/mrzezyno" className="hover:text-white">
+                  <Link href="/okolica/mrzezyno" className="hover:text-perla-100">
                     Domki Mrzeżyno
                   </Link>
                 </li>
                 <li>
-                  <Link href="/okolica/dzwirzyno" className="hover:text-white">
+                  <Link href="/okolica/dzwirzyno" className="hover:text-perla-100">
                     Domki Dźwirzyno
                   </Link>
                 </li>
                 <li>
-                  <Link href="/okolica/kolobrzeg" className="hover:text-white">
+                  <Link href="/okolica/kolobrzeg" className="hover:text-perla-100">
                     Domki Kołobrzeg
                   </Link>
                 </li>
                 <li>
-                  <Link href="/okolica/noclegi-z-psem" className="hover:text-white">
+                  <Link href="/okolica/noclegi-z-psem" className="hover:text-perla-100">
                     Noclegi z psem
                   </Link>
                 </li>
@@ -385,16 +555,16 @@ export default function LazurResort() {
 
             <div>
               <h5 className="font-semibold mb-4">Kontakt</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>+48 123 456 789</li>
-                <li>rezerwacje@lazurresort.pl</li>
+              <ul className="space-y-2 text-sm text-perla-300">
+                <li>+48 502 939 725</li>
+                <li>lazurresort@op.pl</li>
                 <li>72-330 Rogowo</li>
                 <li>woj. zachodniopomorskie</li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <div className="border-t border-szafir-800 mt-8 pt-8 text-center text-sm text-perla-300">
             <p>&copy; 2024 Lazur Resort Rogowo. Domki letniskowe nad morzem. Wszystkie prawa zastrzeżone.</p>
           </div>
         </div>
