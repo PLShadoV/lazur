@@ -61,7 +61,7 @@ export default function Okolica() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Rogowo+plaża+las+sosnowy"
+                src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/dji_fly_20250718_105634_187_1752829029428_photo_optimized-scaled.jpg"
                 alt="Rogowo - spokojna plaża z lasem sosnowym"
                 fill
                 className="object-cover"
@@ -75,7 +75,7 @@ export default function Okolica() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Mrzeżyno+port+rybacki+kutry"
+                src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/port-w-mrzezynie.jpg"
                 alt="Mrzeżyno - port rybacki z kutrami"
                 fill
                 className="object-cover"
@@ -140,7 +140,7 @@ export default function Okolica() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Dźwirzyno+jezioro+kajaki+windsurfing"
+                src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/plaza-dzwirzyno.jpg?height=400&width=600&text=Dźwirzyno+jezioro+kajaki+windsurfing"
                 alt="Dźwirzyno - jezioro z kajakami i windsurfingiem"
                 fill
                 className="object-cover"
@@ -154,7 +154,7 @@ export default function Okolica() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Kołobrzeg+latarnia+morska+molo"
+                src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/latarnia-kolobrzeg.jpg?height=400&width=600&text=Kołobrzeg+latarnia+morska+molo"
                 alt="Kołobrzeg - latarnia morska i molo"
                 fill
                 className="object-cover"
@@ -223,7 +223,7 @@ export default function Okolica() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Ścieżka+rowerowa+las+sosnowy+Rogowo"
+                src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/sciezki-rowerowe-mrzezyno.jpg?height=400&width=600&text=Ścieżka+rowerowa+las+sosnowy+Rogowo"
                 alt="Ścieżka rowerowa przez las sosnowy w Rogowie"
                 fill
                 className="object-cover"

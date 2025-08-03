@@ -24,13 +24,7 @@ function calculatePrice(
 
   if (nights <= 0) return { totalPrice: 0, nights: 0, pricePerNight: 0 }
 
-  // Określenie typu domku na podstawie liczby osób
-  let cottageType: "4os" | "5-6os" | "7-8os"
-  if (guests <= 4) cottageType = "4os"
-  else if (guests <= 6) cottageType = "5-6os"
-  else cottageType = "7-8os"
-
-  // Cennik na podstawie obrazu
+  // Cennik na podstawie liczby osób (jeden typ domku z 2 sypialniami)
   const pricingPeriods = [
     { start: "04-01", end: "05-31", prices: { "4os": 400, "5-6os": 450, "7-8os": 500 } },
     { start: "04-30", end: "05-03", prices: { "4os": 450, "5-6os": 500, "7-8os": 550 } }, // Majówka
@@ -40,6 +34,12 @@ function calculatePrice(
     { start: "08-17", end: "08-31", prices: { "4os": 450, "5-6os": 500, "7-8os": 550 } },
     { start: "09-01", end: "10-31", prices: { "4os": 400, "5-6os": 450, "7-8os": 500 } },
   ]
+
+  // Określenie kategorii cenowej na podstawie liczby osób
+  let priceCategory: "4os" | "5-6os" | "7-8os"
+  if (guests <= 4) priceCategory = "4os"
+  else if (guests <= 6) priceCategory = "5-6os"
+  else priceCategory = "7-8os"
 
   // Funkcja pomocnicza do sprawdzania czy data mieści się w okresie
   const isDateInPeriod = (date: Date, period: { start: string; end: string }) => {
@@ -60,7 +60,7 @@ function calculatePrice(
     let pricePerNight = 400 // Domyślna cena
     for (const period of pricingPeriods) {
       if (isDateInPeriod(currentDate, period)) {
-        pricePerNight = period.prices[cottageType]
+        pricePerNight = period.prices[priceCategory]
         break
       }
     }
@@ -91,8 +91,8 @@ export default function RezerwacjaClient() {
             Rezerwacja Domków Letniskowych Lazur Resort
           </h1>
           <p className="text-lg md:text-xl text-szafir-700 max-w-3xl mx-auto">
-            Zarezerwuj swój domek nad morzem w Rogowie już dziś! Noclegi dla 4, 6 lub 8 osób w województwie
-            zachodniopomorskim z pełnym komfortem.
+            Zarezerwuj swój domek nad morzem w Rogowie już dziś! Domki z 2 sypialniami dla maksymalnie 8 osób w
+            województwie zachodniopomorskim z pełnym komfortem.
           </p>
         </div>
 
@@ -225,22 +225,24 @@ export default function RezerwacjaClient() {
                         </div>
                         <div className="flex justify-between">
                           <span>Liczba osób:</span>
-                          <span className="font-semibold">{guests}</span>
+                          <span className="font-semibold text-blue-600">
+                            {guests <= 4 ? `${guests} osoby` : guests <= 6 ? `${guests} osób` : `${guests} osób`}
+                          </span>
                         </div>
                         <div className="flex justify-between">
-                          <span>Typ domku:</span>
-                          <span className="font-semibold">
-                            {guests <= 4 ? "4 osobowy" : guests <= 6 ? "5-6 osobowy" : "7-8 osobowy"}
+                          <span>Kategoria cenowa:</span>
+                          <span className="font-semibold text-blue-600">
+                            {guests <= 4 ? "do 4 osób" : guests <= 6 ? "5-6 osób" : "7-8 osób"}
                           </span>
                         </div>
                         <div className="flex justify-between">
                           <span>Średnia cena za noc:</span>
-                          <span className="font-semibold">{pricePerNight} zł</span>
+                          <span className="font-semibold text-blue-600">{pricePerNight} zł</span>
                         </div>
                         <hr className="border-zloty-300" />
                         <div className="flex justify-between text-lg font-bold">
                           <span>Całkowity koszt:</span>
-                          <span>{totalPrice} zł</span>
+                          <span className="text-blue-600">{totalPrice} zł</span>
                         </div>
                         <div className="text-sm text-zloty-700">Zadatek (20%): {Math.round(totalPrice * 0.2)} zł</div>
                       </div>
@@ -285,16 +287,25 @@ export default function RezerwacjaClient() {
                     </Badge>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-szafir-700">Domek 4 osobowy:</span>
+                    <span className="text-szafir-700">Typ domku:</span>
                     <span className="text-sm text-szafir-600">2 sypialnie + salon</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-szafir-700">Domek 5-6 osobowy:</span>
-                    <span className="text-sm text-szafir-600">3 sypialnie + salon</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-szafir-700">Domek 7-8 osobowy:</span>
-                    <span className="text-sm text-szafir-600">3 sypialnie + sofa</span>
+                  <div className="bg-blue-50 p-3 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">Ceny według liczby osób:</h4>
+                    <div className="space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-blue-700">Do 4 osób:</span>
+                        <span className="font-semibold text-blue-600">400-650 zł/noc</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-blue-700">5-6 osób:</span>
+                        <span className="font-semibold text-blue-600">450-700 zł/noc</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-blue-700">7-8 osób:</span>
+                        <span className="font-semibold text-blue-600">500-750 zł/noc</span>
+                      </div>
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-szafir-700">Odległość do morza:</span>

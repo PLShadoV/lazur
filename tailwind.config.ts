@@ -19,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-roboto)", "Roboto", "sans-serif"],
+      },
       colors: {
         // Paleta inspirowana szafirrusinowo.pl
         szafir: {

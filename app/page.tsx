@@ -15,7 +15,7 @@ export default function LazurResort() {
 
       {/* Hero Section */}
       <section className="relative h-[600px] bg-gradient-to-br from-slate-800 via-blue-800 to-cyan-700">
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <Image
           src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/dji_fly_20250718_105210_175_1752828774533_photo_optimized.jpg"
           alt="Lazur Resort Rogowo - domki letniskowe nad morzem"
@@ -25,22 +25,10 @@ export default function LazurResort() {
         />
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-perla-50">
-            <h1
-              className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg"
-              style={{
-                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
-                WebkitTextStroke: "1px black",
-              }}
-            >
-              Domki letniskowe <span className="leading-7 text-white font-sans">Lazur Resort</span> Rogowo
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Domki letniskowe <span className="text-white">Lazur Resort</span> Rogowo
             </h1>
-            <p
-              className="text-lg md:text-xl mb-8 text-perla-100 drop-shadow-lg"
-              style={{
-                textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
-                WebkitTextStroke: "0.5px black",
-              }}
-            >
+            <p className="text-lg md:text-xl mb-8 text-white">
               Oferujemy domki letniskowe nad morzem dla 4, 6 lub 8 osób
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -204,7 +192,7 @@ export default function LazurResort() {
             <div className="flex flex-col">
               <div className="relative h-64 rounded-lg overflow-hidden mb-6">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&text=Pies+na+plaży+Rogowo+domki+przyjazne+zwierzętom"
+                  src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/0_Cockapoo-puppy-Canis-lupus-familiaris-England.webp"
                   alt="Pies na plaży w Rogowie - domki przyjazne zwierzętom"
                   fill
                   className="object-cover"
@@ -249,7 +237,7 @@ export default function LazurResort() {
             <div className="flex flex-col">
               <div className="relative h-64 rounded-lg overflow-hidden mb-6">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&text=Ścieżka+rowerowa+R-10+Rogowo+las+sosnowy"
+                  src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/cottage3-home-pic2.jpg"
                   alt="Ścieżka rowerowa R-10 przez las sosnowy w Rogowie"
                   fill
                   className="object-cover"
@@ -304,7 +292,7 @@ export default function LazurResort() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 text-rusinowy-600 mr-3" />
-                  <span className="text-szafir-700">72-330 Rogowo, województwo zachodniopomorskie</span>
+                  <span className="text-szafir-700">Makowa 6, 72-330 Rogowo, województwo zachodniopomorskie</span>
                 </div>
                 <div className="flex items-center">
                   <Waves className="w-5 h-5 text-rusinowy-600 mr-3" />
@@ -331,12 +319,17 @@ export default function LazurResort() {
               </div>
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=400&width=600&text=Mapa+Rogowo+domki+nad+morzem"
-                alt="Mapa lokalizacji Lazur Resort Rogowo - domki letniskowe nad morzem"
-                fill
-                className="object-cover"
-              />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2329.123456789!2d15.123456!3d54.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMakowa%206%2C%2072-330%20Rogowo!5e0!3m2!1spl!2spl!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+                title="Mapa lokalizacji Lazur Resort Rogowo - Makowa 6, 72-330 Rogowo"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -579,7 +572,7 @@ export default function LazurResort() {
               <ul className="space-y-2 text-sm text-perla-300">
                 <li>+48 502 939 725</li>
                 <li>lazurresort@op.pl</li>
-                <li>72-330 Rogowo</li>
+                <li>Makowa 6, 72-330 Rogowo</li>
                 <li>woj. zachodniopomorskie</li>
               </ul>
             </div>
