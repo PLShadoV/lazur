@@ -173,7 +173,7 @@ export default function NoclegiZPsem() {
                 Zasady pobytu
               </h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Dopłata 30 zł za psa za noc</li>
+                <li>• Dopłata 15 zł za psa za noc</li>
                 <li>• Pies musi być zaszczepiony i odrobaczony</li>
                 <li>• Właściciel odpowiada za zachowanie psa</li>
                 <li>• Sprzątanie po psie obowiązkowe</li>

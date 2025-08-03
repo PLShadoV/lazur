@@ -87,8 +87,10 @@ export default function RezerwacjaClient() {
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-szafir-900 mb-4">Rezerwacja Domków Letniskowych Lazur Resort</h1>
-          <p className="text-xl text-szafir-700 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-szafir-900 mb-4">
+            Rezerwacja Domków Letniskowych Lazur Resort
+          </h1>
+          <p className="text-lg md:text-xl text-szafir-700 max-w-3xl mx-auto">
             Zarezerwuj swój domek nad morzem w Rogowie już dziś! Noclegi dla 4, 6 lub 8 osób w województwie
             zachodniopomorskim z pełnym komfortem.
           </p>
@@ -198,7 +200,7 @@ export default function RezerwacjaClient() {
                       </label>
                       <label className="flex items-center">
                         <input type="radio" name="pet" value="tak" className="mr-2 text-szafir-600" />
-                        Tak (+30 zł/noc)
+                        Tak (+15 zł/noc)
                       </label>
                     </div>
                   </div>

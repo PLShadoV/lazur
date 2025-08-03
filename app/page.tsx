@@ -14,7 +14,7 @@ export default function LazurResort() {
       <FloatingMenu />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-r from-szafir-800 to-szafir-600">
+      <section className="relative h-[600px] bg-gradient-to-br from-slate-800 via-blue-800 to-cyan-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <Image
           src="/placeholder.svg?height=600&width=1200&text=Lazur+Resort+Rogowo+domki+nad+morzem"
@@ -24,10 +24,12 @@ export default function LazurResort() {
         />
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-perla-50">
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Domki letniskowe <span className="text-zloty-300">Lazur Resort</span> Rogowo
             </h1>
-            <p className="text-xl mb-8 text-perla-100">Oferujemy domki letniskowe nad morzem dla 4, 6 lub 8 osób</p>
+            <p className="text-lg md:text-xl mb-8 text-perla-100">
+              Oferujemy domki letniskowe nad morzem dla 4, 6 lub 8 osób
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/rezerwacja">
                 <Button size="lg" className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">
@@ -59,32 +61,38 @@ export default function LazurResort() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-szafir-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-szafir-100 to-szafir-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Home className="w-8 h-8 text-szafir-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Domki dla 8 osób</h3>
-              <p className="text-szafir-600">Przestronne domki letniskowe z pełnym wyposażeniem dla całej rodziny</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-szafir-800">Domki dla 8 osób</h3>
+              <p className="text-base md:text-base text-szafir-600">
+                Przestronne domki letniskowe z pełnym wyposażeniem dla całej rodziny
+              </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-rusinowy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-rusinowy-100 to-rusinowy-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Waves className="w-8 h-8 text-rusinowy-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Blisko morza</h3>
-              <p className="text-szafir-600">Noclegi nad morzem w Rogowie - zaledwie kilka minut do plaży</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-szafir-800">Blisko morza</h3>
+              <p className="text-base md:text-base text-szafir-600">
+                Noclegi nad morzem w Rogowie - zaledwie kilka minut do plaży
+              </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-zloty-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-zloty-100 to-zloty-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Wifi className="w-8 h-8 text-zloty-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Pełne wyposażenie</h3>
-              <p className="text-szafir-600">WiFi, TV, klimatyzacja i wszystko czego potrzebujesz na wakacje</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-szafir-800">Pełne wyposażenie</h3>
+              <p className="text-base md:text-base text-szafir-600">
+                WiFi, TV, klimatyzacja i wszystko czego potrzebujesz na wakacje
+              </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Car className="w-8 h-8 text-emerald-700" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-szafir-800">Parking</h3>
-              <p className="text-szafir-600">Bezpłatny parking przy każdym domku letniskowym</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-szafir-800">Parking</h3>
+              <p className="text-base md:text-base text-szafir-600">Bezpłatny parking przy każdym domku letniskowym</p>
             </div>
           </div>
         </div>
@@ -100,7 +108,7 @@ export default function LazurResort() {
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow border-szafir-100">
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-szafir-100 rounded-2xl">
               <div className="relative h-64">
                 <Image
                   src="/placeholder.svg?height=300&width=600&text=Domek+Lazur+Resort+Rogowo"
@@ -213,7 +221,7 @@ export default function LazurResort() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
-                    Dopłata tylko 30 zł/noc
+                    Dopłata tylko 15 zł/noc
                   </li>
                 </ul>
                 <Link href="/okolica/noclegi-z-psem">
