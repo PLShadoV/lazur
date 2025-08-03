@@ -348,17 +348,13 @@ export default function RezerwacjaClient() {
 
         <div className="mt-16 bg-[#001e4c] text-perla-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Dlaczego rezerwować domki w Lazur Resort Rogowo?</h2>
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
             <div>
               <CheckCircle className="w-8 h-8 mx-auto mb-3 text-emerald-400" />
               <h3 className="font-semibold mb-2">Gwarancja najlepszej ceny</h3>
               <p className="text-sm text-perla-200">Konkurencyjne ceny noclegów nad morzem</p>
             </div>
-            <div>
-              <CheckCircle className="w-8 h-8 mx-auto mb-3 text-emerald-400" />
-              <h3 className="font-semibold mb-2">Bezpłatna anulacja</h3>
-              <p className="text-sm text-perla-200">Do 7 dni przed przyjazdem</p>
-            </div>
+            
             <div>
               <CheckCircle className="w-8 h-8 mx-auto mb-3 text-emerald-400" />
               <h3 className="font-semibold mb-2">Obsługa 24/7</h3>
