@@ -1,11 +1,18 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import { Phone, Mail, MapPin, Calendar, ChevronUp, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export default function FloatingMenu() {
   const [isOpen, setIsOpen] = useState(true)
+
+  const handleToggle = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsOpen(!isOpen)
+  }
 
   const menuItems = [
     {
@@ -19,7 +26,7 @@ export default function FloatingMenu() {
       icon: Mail,
       label: "Email",
       href: "mailto:lazurresort@op.pl",
-      color: "bg-rose-600 hover:bg-rose-700",
+      color: "bg-rusinowy-600 hover:bg-rusinowy-700",
       text: "lazurresort@op.pl",
     },
     {
@@ -44,7 +51,7 @@ export default function FloatingMenu() {
         {/* Menu Items */}
         <div
           className={`flex flex-col space-y-2 transition-all duration-300 mb-2 ${
-            isOpen ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+            isOpen ? "translate-y-0 opacity-100 visible" : "translate-y-full opacity-0 invisible"
           }`}
         >
           {menuItems.map((item, index) => (
@@ -57,7 +64,7 @@ export default function FloatingMenu() {
               title={item.label}
             >
               <item.icon className="w-4 h-4" />
-              <span className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              <span className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
                 <div className="font-semibold">{item.label}</div>
                 <div className="text-xs text-gray-300">{item.text}</div>
               </span>
@@ -66,13 +73,13 @@ export default function FloatingMenu() {
         </div>
 
         {/* Toggle Button */}
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          className="bg-navy-700 hover:bg-navy-800 text-white p-2.5 rounded-l-lg shadow-lg"
-          size="sm"
+        <button
+          onClick={handleToggle}
+          className="bg-szafir-700 hover:bg-szafir-800 text-white p-2.5 rounded-l-lg shadow-lg transition-colors"
+          type="button"
         >
           {isOpen ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
-        </Button>
+        </button>
       </div>
     </div>
   )
