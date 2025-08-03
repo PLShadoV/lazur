@@ -10,7 +10,7 @@ export default function Header() {
   const [isOkolicaOpen, setIsOkolicaOpen] = useState(false)
 
   return (
-    <header className="bg-slate-900 shadow-lg border-b border-slate-700 sticky top-0 z-50">
+    <header className="bg-[#001e4c] shadow-lg border-b border-[#002a66] sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
@@ -95,7 +95,7 @@ export default function Header() {
               Kontakt
             </Link>
             <Link href="/rezerwacja">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">Rezerwuj</Button>
+              <Button className="bg-[#002a66] hover:bg-[#003d99] text-white">Rezerwuj</Button>
             </Link>
           </nav>
 
@@ -107,7 +107,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-slate-700 pt-4">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-[#002a66] pt-4">
             <div className="flex flex-col space-y-4">
               <Link href="/" className="text-white hover:text-blue-300 transition-colors font-medium text-lg">
                 Strona główna
@@ -172,7 +172,7 @@ export default function Header() {
                 Kontakt
               </Link>
               <Link href="/rezerwacja">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full text-lg py-3">Rezerwuj</Button>
+                <Button className="bg-[#002a66] hover:bg-[#003d99] text-white w-full text-lg py-3">Rezerwuj</Button>
               </Link>
             </div>
           </nav>

@@ -200,7 +200,7 @@ export default function RezerwacjaClient() {
                       </label>
                       <label className="flex items-center">
                         <input type="radio" name="pet" value="tak" className="mr-2 text-szafir-600" />
-                        Tak (+15 zł/noc)
+                        Tak (+15 zł/dobę)
                       </label>
                     </div>
                   </div>
@@ -262,7 +262,7 @@ export default function RezerwacjaClient() {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50 text-lg py-3">
+                  <Button className="w-full bg-[#001e4c] hover:bg-[#002a66] text-white text-lg py-3">
                     Wyślij zapytanie o rezerwację
                   </Button>
                 </form>
@@ -291,7 +291,7 @@ export default function RezerwacjaClient() {
                     <span className="text-sm text-szafir-600">2 sypialnie + salon</span>
                   </div>
                   <div className="bg-blue-50 p-3 rounded-lg">
-                    <h4 className="font-semibold text-blue-900 mb-2">Ceny według liczby osób:</h4>
+                    <h4 className="font-semibold text-blue-900 mb-2">Ceny dla domku (max 8 osób):</h4>
                     <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
                         <span className="text-blue-700">Do 4 osób:</span>
@@ -346,7 +346,7 @@ export default function RezerwacjaClient() {
           </div>
         </div>
 
-        <div className="mt-16 bg-szafir-700 text-perla-50 rounded-lg p-8 text-center">
+        <div className="mt-16 bg-[#001e4c] text-perla-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Dlaczego rezerwować domki w Lazur Resort Rogowo?</h2>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div>

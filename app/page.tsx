@@ -17,7 +17,7 @@ export default function LazurResort() {
       <section className="relative h-[600px] bg-gradient-to-br from-slate-800 via-blue-800 to-cyan-700">
         <div className="absolute inset-0 bg-black/50"></div>
         <Image
-          src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/dji_fly_20250718_105210_175_1752828774533_photo_optimized.jpg"
+          src="https://lazurrogowo.pl/wp/wp-content/uploads/2025/08/dji_fly_20250718_105210_175_1752828774533_photo_optimized-photoaidcom-darken-photoaidcom-darken-scaled.jpg"
           alt="Lazur Resort Rogowo - domki letniskowe nad morzem"
           fill
           className="object-cover"
@@ -33,7 +33,7 @@ export default function LazurResort() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/rezerwacja">
-                <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white">
+                <Button size="lg" className="bg-[#001e4c] hover:bg-[#002a66] text-white">
                   Rezerwuj domek
                 </Button>
               </Link>
@@ -135,14 +135,14 @@ export default function LazurResort() {
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="space-y-2">
                     <div className="flex items-center text-sm text-szafir-700">
-                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />3 sypialnie + salon z rozkładaną sofą
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />2 sypialnie + salon z rozkładaną sofą
                     </div>
                     <div className="flex items-center text-sm text-szafir-700">
                       <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
                       Kuchnia z pełnym wyposażeniem
                     </div>
                     <div className="flex items-center text-sm text-szafir-700">
-                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />2 łazienki z prysznicem
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />1 łazienka z prysznicem
                     </div>
                     <div className="flex items-center text-sm text-szafir-700">
                       <CheckCircle className="w-4 h-4 mr-2 text-emerald-600" />
@@ -175,7 +175,7 @@ export default function LazurResort() {
                     <p className="text-szafir-600">Ceny sezonowe</p>
                   </div>
                   <Link href="/rezerwacja">
-                    <Button className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">Rezerwuj domek</Button>
+                    <Button className="bg-[#001e4c] hover:bg-[#002a66] text-white">Rezerwuj domek</Button>
                   </Link>
                 </div>
               </CardContent>
@@ -226,7 +226,7 @@ export default function LazurResort() {
                   </li>
                 </ul>
                 <Link href="/okolica/noclegi-z-psem">
-                  <Button className="bg-rusinowy-600 hover:bg-rusinowy-700 text-perla-50">
+                  <Button className="bg-[#001e4c] hover:bg-[#002a66] text-white">
                     Dowiedz się więcej o noclegach z psem
                   </Button>
                 </Link>
@@ -271,7 +271,7 @@ export default function LazurResort() {
                   </li>
                 </ul>
                 <Link href="/okolica/sciezki-rowerowe">
-                  <Button className="bg-szafir-600 hover:bg-szafir-700 text-perla-50">Odkryj trasy rowerowe</Button>
+                  <Button className="bg-[#001e4c] hover:bg-[#002a66] text-white">Odkryj trasy rowerowe</Button>
                 </Link>
               </div>
             </div>

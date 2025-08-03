@@ -143,7 +143,9 @@ export default function Kontakt() {
                   <Textarea placeholder="Dodatkowe informacje, pytania o domki letniskowe nad morzem..." rows={4} />
                 </div>
 
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">Wyślij zapytanie o rezerwację</Button>
+                <Button className="w-full bg-[#001e4c] hover:bg-[#002a66] text-white">
+                  Wyślij zapytanie o rezerwację
+                </Button>
 
                 <p className="text-xs text-gray-500 text-center">* Pola wymagane. Odpowiemy w ciągu 24 godzin.</p>
               </form>

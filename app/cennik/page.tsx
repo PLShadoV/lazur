@@ -108,7 +108,7 @@ export default function Cennik() {
                     </div>
                     <p className="text-gray-600 text-sm mb-6">{period.description}</p>
                     <Link href="/rezerwacja">
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700">Rezerwuj</Button>
+                      <Button className="w-full bg-[#001e4c] hover:bg-[#002a66] text-white">Rezerwuj</Button>
                     </Link>
                   </CardContent>
                 </Card>
@@ -127,7 +127,7 @@ export default function Cennik() {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span>3 sypialnie + salon z rozkładaną sofą</span>
+                <span>2 sypialnie + salon z rozkładaną sofą</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -135,7 +135,7 @@ export default function Cennik() {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span>2 łazienki z prysznicem</span>
+                <span>1 łazienka z prysznicem</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -159,10 +159,6 @@ export default function Cennik() {
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                 <span>Pościel i ręczniki</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span>Sprzątanie końcowe</span>
-              </div>
             </div>
           </div>
         </div>
@@ -183,16 +179,10 @@ export default function Cennik() {
                 <strong>Zameldowanie:</strong> od 15:00
               </p>
               <p>
-                <strong>Wymeldowanie:</strong> do 11:00
+                <strong>Wymeldowanie:</strong> do 10:00
               </p>
               <p>
-                <strong>Zaliczka:</strong> 30% wartości pobytu
-              </p>
-              <p>
-                <strong>Dopłata za sprzątanie:</strong> wliczona w cenę
-              </p>
-              <p>
-                <strong>Kaucja zwrotna:</strong> 200 zł
+                <strong>Zaliczka:</strong> 20% wartości pobytu
               </p>
             </CardContent>
           </Card>
@@ -206,16 +196,10 @@ export default function Cennik() {
             </CardHeader>
             <CardContent className="space-y-3">
               <p>
-                <strong>Domek 4 osobowy:</strong> 2 sypialnie + salon
+                <strong>Domek dla 8 osób:</strong> 2 sypialnie + salon z rozkładanymi sofami i łóżkiem narożnym
               </p>
               <p>
-                <strong>Domek 5-6 osobowy:</strong> 3 sypialnie + salon
-              </p>
-              <p>
-                <strong>Domek 7-8 osobowy:</strong> 3 sypialnie + salon z sofą
-              </p>
-              <p>
-                <strong>Zwierzęta:</strong> dozwolone za dopłatą 30 zł/noc
+                <strong>Zwierzęta:</strong> dozwolone za dopłatą 15 zł/dobę
               </p>
               <p>
                 <strong>Odległość do morza:</strong> 400 metrów
@@ -227,11 +211,11 @@ export default function Cennik() {
           </Card>
         </div>
 
-        <div className="mt-16 text-center bg-blue-600 text-white rounded-lg p-8">
+        <div className="mt-16 text-center bg-[#001e4c] text-white rounded-lg p-8">
           <h2 className="text-2xl font-bold mb-4">Gotowy na wypoczynek nad morzem w Rogowie?</h2>
           <p className="text-xl mb-6">Zarezerwuj domek letniskowy w Lazur Resort już dziś!</p>
           <Link href="/rezerwacja">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+            <Button size="lg" className="bg-[#002a66] hover:bg-[#003d99] text-white">
               Sprawdź dostępność i rezerwuj
             </Button>
           </Link>
